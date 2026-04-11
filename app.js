@@ -139,36 +139,96 @@ function showToast(message, type = 'success') {
 // --- Auth Systems ---
 const authOverlay = document.getElementById('auth-overlay');
 const mainApp = document.getElementById('main-app');
-const tabButtons = document.querySelectorAll('.auth-tab');
-const tabIndicator = document.querySelector('.tab-indicator');
-const forms = document.querySelectorAll('.auth-form');
+// Auth State variables
+let isSignUp = true;
+let isForgotPassword = false;
+let showPassword = false;
 
-// Tab Switching
-tabButtons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        // Update tabs
-        tabButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+// DOM Elements
+const authTitle = document.getElementById('auth-title');
+const authDesc = document.getElementById('auth-desc');
+const nameGroup = document.getElementById('name-group');
+const authName = document.getElementById('auth-name');
+const passwordGroup = document.getElementById('password-group');
+const authPassword = document.getElementById('auth-password');
+const authOptions = document.getElementById('auth-options');
+const submitBtnSpan = document.querySelector('#submit-btn span');
+const socialSection = document.getElementById('social-login-section');
+const toggleText = document.getElementById('toggle-text');
+const forgotBtn = document.getElementById('forgot-btn');
+const togglePasswordBtn = document.getElementById('toggle-password');
+const unifiedForm = document.getElementById('unified-auth-form');
+
+function renderAuthUI() {
+    if (isForgotPassword) {
+        authTitle.textContent = 'Reset password';
+        authDesc.textContent = 'Enter your email to receive a password reset link';
+        nameGroup.classList.add('hidden');
+        authName.required = false;
+        passwordGroup.classList.add('hidden');
+        authPassword.required = false;
+        authOptions.classList.add('hidden');
+        submitBtnSpan.textContent = 'Send reset link';
+        socialSection.classList.add('hidden');
         
-        // Move indicator
-        tabIndicator.style.transform = `translateX(${index * 100}%)`;
+        toggleText.innerHTML = `Remember your password? <button type="button" id="toggle-mode-btn" style="background:none; border:none; color:var(--text-primary); font-weight:600; cursor:pointer;">Back to sign in</button>`;
+    } else if (isSignUp) {
+        authTitle.textContent = 'Create an account';
+        authDesc.textContent = 'Enter your information to get started';
+        nameGroup.classList.remove('hidden');
+        authName.required = true;
+        passwordGroup.classList.remove('hidden');
+        authPassword.required = true;
+        authOptions.classList.add('hidden');
+        submitBtnSpan.textContent = 'Sign up';
+        socialSection.classList.remove('hidden');
         
-        // Switch forms
-        forms.forEach(f => f.classList.remove('active'));
-        document.getElementById(`${btn.dataset.tab}-form`).classList.add('active');
-    });
+        toggleText.innerHTML = `Already have an account? <button type="button" id="toggle-mode-btn" style="background:none; border:none; color:var(--text-primary); font-weight:600; cursor:pointer;">Sign in</button>`;
+    } else {
+        authTitle.textContent = 'Welcome back';
+        authDesc.textContent = 'Enter your credentials to access your account';
+        nameGroup.classList.add('hidden');
+        authName.required = false;
+        passwordGroup.classList.remove('hidden');
+        authPassword.required = true;
+        authOptions.classList.remove('hidden');
+        submitBtnSpan.textContent = 'Sign in';
+        socialSection.classList.remove('hidden');
+        
+        toggleText.innerHTML = `Don't have an account? <button type="button" id="toggle-mode-btn" style="background:none; border:none; color:var(--text-primary); font-weight:600; cursor:pointer;">Sign up</button>`;
+    }
+    
+    // Re-attach listener
+    document.getElementById('toggle-mode-btn').addEventListener('click', handleToggleMode);
+}
+
+function handleToggleMode() {
+    if (isForgotPassword) {
+        isForgotPassword = false;
+    } else {
+        isSignUp = !isSignUp;
+    }
+    renderAuthUI();
+}
+
+forgotBtn.addEventListener('click', () => {
+    isForgotPassword = true;
+    renderAuthUI();
+});
+
+togglePasswordBtn.addEventListener('click', () => {
+    showPassword = !showPassword;
+    authPassword.type = showPassword ? 'text' : 'password';
 });
 
 let currentUser = null;
 
 function loginUser(name) {
-    currentUser = { name: name };
+    currentUser = { name: name || 'User' };
     
-    // Update UI
-    document.getElementById('user-name').textContent = name;
-    document.getElementById('user-avatar').textContent = name.charAt(0).toUpperCase();
+    document.getElementById('user-name').textContent = currentUser.name;
+    document.getElementById('user-avatar').textContent = currentUser.name.charAt(0).toUpperCase();
     
-    // Hide auth, show app
     authOverlay.classList.add('fade-out');
     mainApp.classList.remove('hidden');
     
@@ -176,35 +236,37 @@ function loginUser(name) {
         mainApp.classList.add('visible');
     }, 300);
     
-    showToast(`Welcome back, ${name}!`);
+    showToast(`Welcome back, ${currentUser.name}!`);
 }
 
-// Form Submissions
-document.getElementById('login-form').addEventListener('submit', (e) => {
+unifiedForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const email = document.getElementById('login-email').value;
-    const name = email.split('@')[0];
-    loginUser(name);
-});
-
-document.getElementById('signup-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('signup-name').value;
-    loginUser(name);
-});
-
-// Google Sign-in Mock (Since we don't have real API keys setup in this pure frontend demo)
-document.getElementById('google-signin-btn').addEventListener('click', () => {
-    // Simulate API delay
-    const btn = document.getElementById('google-signin-btn');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '<span>Connecting...</span>';
+    const email = document.getElementById('auth-email').value;
     
-    setTimeout(() => {
-        loginUser('Google User');
-        btn.innerHTML = originalText;
-    }, 1000);
+    if (isForgotPassword) {
+        showToast(`Reset link sent to ${email}`, 'success');
+        isForgotPassword = false;
+        renderAuthUI();
+        return;
+    }
+    
+    const name = isSignUp ? authName.value : email.split('@')[0];
+    loginUser(name);
 });
+
+function handleSocialLogin(provider) {
+    if (provider === 'github') {
+        window.location.href = 'https://github.com/login/oauth/authorize?client_id=YOUR_GITHUB_CLIENT_ID';
+    } else if (provider === 'google') {
+        window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email%20profile';
+    }
+}
+
+document.getElementById('github-login-btn').addEventListener('click', () => handleSocialLogin('github'));
+document.getElementById('google-login-btn').addEventListener('click', () => handleSocialLogin('google'));
+
+// Initialize UI
+renderAuthUI();
 
 // Logout
 document.getElementById('logout-btn').addEventListener('click', () => {

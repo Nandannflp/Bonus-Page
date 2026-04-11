@@ -185,6 +185,20 @@ ul {
     z-index: 1;
 }
 
+.auth-form {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .input-group {
     position: relative;
     margin-bottom: 24px;
