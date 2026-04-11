@@ -781,14 +781,14 @@ ul {
 
 .referral-locked-overlay {
     position: absolute;
-    top: 150px;
+    top: 220px;
     left: 0;
     width: 100%;
-    height: calc(100% - 150px);
+    height: calc(100% - 220px);
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 100px;
+    padding-top: 60px;
     z-index: 10;
 }
 
