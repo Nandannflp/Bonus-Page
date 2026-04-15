@@ -140,7 +140,7 @@ function showToast(message, type = 'success') {
 const authOverlay = document.getElementById('auth-overlay');
 const mainApp = document.getElementById('main-app');
 // Auth State variables
-let isSignUp = true;
+let isSignUp = false;
 let isForgotPassword = false;
 let showPassword = false;
 

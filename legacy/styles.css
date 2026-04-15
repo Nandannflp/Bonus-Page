@@ -319,6 +319,30 @@ ul {
     box-shadow: 0 10px 20px -10px rgba(255,255,255, 0.2);
 }
 
+.github-btn {
+    width: 100%;
+    background: #24292e;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition);
+}
+
+.github-btn:hover {
+    background: #2f363d;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(0,0,0, 0.4);
+}
+
 .auth-footer {
     text-align: center;
     margin-top: 32px;
