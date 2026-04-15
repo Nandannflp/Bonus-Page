@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useId } from 'react';
 import { Button } from '@/components/ui/button';
 import {

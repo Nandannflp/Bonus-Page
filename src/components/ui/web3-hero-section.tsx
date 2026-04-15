@@ -1,11 +1,11 @@
 import React from 'react';
-import { Github, Package, Code } from 'lucide-react';
+import { GitBranch, Package, Code } from 'lucide-react';
 
 // Main App Component
 export default function Web3HeroSection() {
     // Data for partner logos for easy management
     const partners = [
-        { name: "git", icon: <Github className="h-6 w-auto text-gray-400" /> },
+        { name: "git", icon: <GitBranch className="h-6 w-auto text-gray-400" /> },
         { name: "npm", icon: <Package className="h-6 w-auto text-gray-400" /> },
         { name: "Lucidchart", text: "Lucidchart" },
         { name: "wrike", text: "wrike" },
