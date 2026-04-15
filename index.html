@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exclusive Bonuses — Unlock Premium Tools & Courses</title>
-    <meta name="description" content="Unlock exclusive free tools, courses, and a powerful referral system. Sign in and enter secret codes to access premium bonuses.">
+    <meta name="description"
+        content="Unlock exclusive free tools, courses, and a powerful referral system. Sign in and enter secret codes to access premium bonuses.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Sign-In -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
+
 <body>
     <!-- ===== PARTICLES BACKGROUND ===== -->
     <canvas id="particles-canvas"></canvas>
@@ -22,14 +27,15 @@
             <div class="auth-logo">
                 <div class="logo-icon">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                        <path d="M24 4L6 14V34L24 44L42 34V14L24 4Z" stroke="url(#logo-grad)" stroke-width="2.5" fill="none"/>
-                        <path d="M24 14L14 20V30L24 36L34 30V20L24 14Z" fill="url(#logo-grad)" opacity="0.3"/>
-                        <path d="M24 18L18 22V28L24 32L30 28V22L24 18Z" fill="url(#logo-grad)"/>
+                        <path d="M24 4L6 14V34L24 44L42 34V14L24 4Z" stroke="url(#logo-grad)" stroke-width="2.5"
+                            fill="none" />
+                        <path d="M24 14L14 20V30L24 36L34 30V20L24 14Z" fill="url(#logo-grad)" opacity="0.3" />
+                        <path d="M24 18L18 22V28L24 32L30 28V22L24 18Z" fill="url(#logo-grad)" />
                         <defs>
                             <linearGradient id="logo-grad" x1="6" y1="4" x2="42" y2="44">
-                                <stop offset="0%" stop-color="#a78bfa"/>
-                                <stop offset="50%" stop-color="#818cf8"/>
-                                <stop offset="100%" stop-color="#6366f1"/>
+                                <stop offset="0%" stop-color="#a78bfa" />
+                                <stop offset="50%" stop-color="#818cf8" />
+                                <stop offset="100%" stop-color="#6366f1" />
                             </linearGradient>
                         </defs>
                     </svg>
@@ -53,15 +59,20 @@
                     <input type="password" id="auth-password" required autocomplete="current-password">
                     <label for="auth-password">Password</label>
                     <div class="input-line"></div>
-                    <button type="button" id="toggle-password" style="position:absolute; right:16px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-secondary); cursor:pointer;">👁️</button>
+                    <button type="button" id="toggle-password"
+                        style="position:absolute; right:16px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-secondary); cursor:pointer;">👁️</button>
                 </div>
 
-                <div class="auth-options" id="auth-options" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
-                    <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem; color:var(--text-secondary);">
+                <div class="auth-options" id="auth-options"
+                    style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+                    <label
+                        style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem; color:var(--text-secondary);">
                         <input type="checkbox" id="auth-remember">
                         Remember me
                     </label>
-                    <button type="button" id="forgot-btn" style="background:none; border:none; color:var(--text-primary); cursor:pointer; font-size:0.9rem;">Forgot password?</button>
+                    <button type="button" id="forgot-btn"
+                        style="background:none; border:none; color:var(--text-primary); cursor:pointer; font-size:0.9rem;">Forgot
+                        password?</button>
                 </div>
 
                 <button type="submit" class="auth-btn" id="submit-btn">
@@ -76,16 +87,25 @@
                 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
                     <button class="google-btn" style="width:100%;" id="github-login-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/>
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
                         </svg>
                         <span>Github</span>
                     </button>
                     <button class="google-btn" style="width:100%;" id="google-login-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24">
-                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                fill="#4285F4" />
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                fill="#34A853" />
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                fill="#FBBC05" />
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                fill="#EA4335" />
                         </svg>
                         <span>Google</span>
                     </button>
@@ -94,7 +114,9 @@
 
             <div style="margin-top:24px; text-align:center;">
                 <p id="toggle-text" style="color:var(--text-secondary); font-size:0.9rem;">
-                    Don't have an account? <button type="button" id="toggle-mode-btn" style="background:none; border:none; color:var(--text-primary); font-weight:600; cursor:pointer;">Sign up</button>
+                    Don't have an account? <button type="button" id="toggle-mode-btn"
+                        style="background:none; border:none; color:var(--text-primary); font-weight:600; cursor:pointer;">Sign
+                        up</button>
                 </p>
             </div>
         </div>
@@ -107,12 +129,13 @@
             <div class="nav-left">
                 <div class="nav-logo">
                     <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-                        <path d="M24 4L6 14V34L24 44L42 34V14L24 4Z" stroke="url(#nav-grad)" stroke-width="2.5" fill="none"/>
-                        <path d="M24 18L18 22V28L24 32L30 28V22L24 18Z" fill="url(#nav-grad)"/>
+                        <path d="M24 4L6 14V34L24 44L42 34V14L24 4Z" stroke="url(#nav-grad)" stroke-width="2.5"
+                            fill="none" />
+                        <path d="M24 18L18 22V28L24 32L30 28V22L24 18Z" fill="url(#nav-grad)" />
                         <defs>
                             <linearGradient id="nav-grad" x1="6" y1="4" x2="42" y2="44">
-                                <stop offset="0%" stop-color="#a78bfa"/>
-                                <stop offset="100%" stop-color="#6366f1"/>
+                                <stop offset="0%" stop-color="#a78bfa" />
+                                <stop offset="100%" stop-color="#6366f1" />
                             </linearGradient>
                         </defs>
                     </svg>
@@ -130,7 +153,11 @@
                     <span class="user-name" id="user-name">User</span>
                 </div>
                 <button class="logout-btn" id="logout-btn" title="Sign Out">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
                 </button>
             </div>
         </nav>
@@ -140,7 +167,8 @@
             <div class="hero-content">
                 <div class="hero-badge">🎁 EXCLUSIVE ACCESS</div>
                 <h1 class="hero-title">Unlock Your <span class="gradient-text">Premium Bonuses</span></h1>
-                <p class="hero-desc">Three tiers of exclusive tools, courses, and rewards await you. Enter the secret codes to reveal hidden treasures.</p>
+                <p class="hero-desc">Three tiers of exclusive tools, courses, and rewards await you. Enter the secret
+                    codes to reveal hidden treasures.</p>
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number" id="stat-tools">15+</span>
@@ -182,7 +210,10 @@
                     <div class="code-field">
                         <input type="text" id="day1-code" placeholder="Enter code..." maxlength="30" autocomplete="off">
                         <button class="code-submit" id="day1-code-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
                         </button>
                     </div>
                     <p class="code-error hidden" id="day1-error">Invalid code. Try again!</p>
@@ -194,76 +225,100 @@
                 <!-- Tools -->
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=ollama.com&sz=128" alt="Ollama" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=ollama.com&sz=128" alt="Ollama"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>Ollama</h3>
                     <p>Run open-source large language models locally on your machine.</p>
-                    <a href="https://ollama.com" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://ollama.com" class="card-link" target="_blank" rel="noopener noreferrer">Access Now
+                        →</a>
                 </div>
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=librechat.ai&sz=128" alt="LibreChat" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=librechat.ai&sz=128" alt="LibreChat"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>LibreChat</h3>
                     <p>Open-source chat interface for multiple AI models with advanced features.</p>
-                    <a href="https://librechat.ai" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://librechat.ai" class="card-link" target="_blank" rel="noopener noreferrer">Access
+                        Now →</a>
                 </div>
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=jan.ai&sz=128" alt="Jan" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=jan.ai&sz=128" alt="Jan"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>Jan</h3>
                     <p>Open-source, local-first AI assistant that runs perfectly offline.</p>
-                    <a href="https://jan.ai" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://jan.ai" class="card-link" target="_blank" rel="noopener noreferrer">Access Now
+                        →</a>
                 </div>
                 <!-- Courses -->
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=128&auto=format&fit=crop" alt="Sales Dynamics" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=128&auto=format&fit=crop"
+                        alt="Sales Dynamics"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>Sales Dynamics</h3>
                     <p>Basics to advanced sales techniques for closing more deals.</p>
-                    <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://achieversclubofficial.graphy.com/courses/Sales-Dynamo-From-Basics-to-Brilliance-in-Closing-Deals-and-Mastering-Sales-670117315ef93458627e1c7e-670117315ef93458627e1c7e"
+                        class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
                 </div>
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=128&auto=format&fit=crop" alt="InstaSuccess" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=128&auto=format&fit=crop"
+                        alt="InstaSuccess"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>InstaSuccess</h3>
                     <p>Mastering Instagram growth, connect, and grow your audience.</p>
-                    <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://achieversclubofficial.graphy.com/courses/InstaSuccess-Mastering-Social-Media--Building-a-Magnetic-Personal-Brand-6700f507d3cd783242fbf17d-6700f507d3cd783242fbf17d"
+                        class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
                 </div>
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=128&auto=format&fit=crop" alt="Charisma Catalyst" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=128&auto=format&fit=crop"
+                        alt="Charisma Catalyst"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>Charisma Catalyst</h3>
                     <p>Elevate communication skills and build lasting connections.</p>
-                    <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://achieversclubofficial.graphy.com/courses/Charisma-Catalyst-Elevate-Your-Communication--Transform-Your-Presence-67002a16faf76545d359107b-67002a16faf76545d359107b"
+                        class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
                 </div>
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=128&auto=format&fit=crop" alt="The Psychology of Sales" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=128&auto=format&fit=crop"
+                        alt="The Psychology of Sales"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>The Psychology of Sales</h3>
                     <p>Free video training on the psychological principles of selling.</p>
-                    <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://www.youtube.com/watch?v=7Tz99gfY6nQ" class="card-link" target="_blank"
+                        rel="noopener noreferrer">Start Learning →</a>
                 </div>
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://images.unsplash.com/photo-1475823678248-624fc6f85785?q=80&w=128&auto=format&fit=crop" alt="Public Speaking Mastery" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://images.unsplash.com/photo-1475823678248-624fc6f85785?q=80&w=128&auto=format&fit=crop"
+                        alt="Public Speaking Mastery"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>Public Speaking Mastery</h3>
                     <p>Master public speaking and captivate any audience with confidence.</p>
-                    <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://www.youtube.com/watch?v=MXKkXXYUxBc" class="card-link" target="_blank"
+                        rel="noopener noreferrer">Start Learning →</a>
                 </div>
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=128&auto=format&fit=crop" alt="Social Media Success" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=128&auto=format&fit=crop"
+                        alt="Social Media Success"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>Social Media Success</h3>
                     <p>Building brand presence online across multiple platforms.</p>
-                    <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://academy.hubspot.com/courses/social-media" class="card-link" target="_blank"
+                        rel="noopener noreferrer">Start Learning →</a>
                 </div>
             </div>
         </section>
@@ -292,7 +347,10 @@
                     <div class="code-field">
                         <input type="text" id="day2-code" placeholder="Enter code..." maxlength="30" autocomplete="off">
                         <button class="code-submit" id="day2-code-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
                         </button>
                     </div>
                     <p class="code-error hidden" id="day2-error">Invalid code. Try again!</p>
@@ -304,76 +362,94 @@
                 <!-- Tools -->
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=flowiseai.com&sz=128" alt="Flowise" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=flowiseai.com&sz=128" alt="Flowise"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>Flowise</h3>
                     <p>Drag & drop UI for LLM apps.</p>
-                    <a href="https://flowiseai.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://flowiseai.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access
+                        Now →</a>
                 </div>
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=langchain.com&sz=128" alt="LangChain" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=langchain.com&sz=128" alt="LangChain"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>LangChain</h3>
                     <p>Framework for LLM-powered apps.</p>
-                    <a href="https://www.langchain.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://www.langchain.com/" class="card-link" target="_blank"
+                        rel="noopener noreferrer">Access Now →</a>
                 </div>
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=botpress.com&sz=128" alt="Botpress" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=botpress.com&sz=128" alt="Botpress"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>Botpress</h3>
                     <p>Conversational AI platform.</p>
-                    <a href="https://botpress.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://botpress.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access
+                        Now →</a>
                 </div>
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=rasa.com&sz=128" alt="Rasa" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=rasa.com&sz=128" alt="Rasa"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>Rasa</h3>
                     <p>ML framework for automated text/voice.</p>
-                    <a href="https://rasa.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://rasa.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now
+                        →</a>
                 </div>
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=stability.ai&sz=128" alt="Stable Diffusion" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=stability.ai&sz=128" alt="Stable Diffusion"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>Stable Diffusion</h3>
                     <p>Open-source image generation.</p>
-                    <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" class="card-link"
+                        target="_blank" rel="noopener noreferrer">Access Now →</a>
                 </div>
                 <div class="bonus-card tool-card">
                     <div class="card-glow"></div>
-                    <img src="https://www.google.com/s2/favicons?domain=localai.io&sz=128" alt="LocalAI" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                    <img src="https://www.google.com/s2/favicons?domain=localai.io&sz=128" alt="LocalAI"
+                        style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
                     <span class="card-tag">Tool</span>
                     <h3>LocalAI</h3>
                     <p>Self-hosted ChatGPT replacement.</p>
-                    <a href="https://localai.io/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                    <a href="https://localai.io/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now
+                        →</a>
                 </div>
                 <!-- Courses -->
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://img.youtube.com/vi/J9F_cdsEeQY/0.jpg" alt="Sales Goal Setting" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://img.youtube.com/vi/J9F_cdsEeQY/0.jpg" alt="Sales Goal Setting"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>Sales Goal Setting</h3>
                     <p>Keys to achieving sales goals.</p>
-                    <a href="https://www.youtube.com/watch?v=J9F_cdsEeQY" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://www.youtube.com/watch?v=J9F_cdsEeQY" class="card-link" target="_blank"
+                        rel="noopener noreferrer">Start Learning →</a>
                 </div>
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://img.youtube.com/vi/avMqpd921rg/0.jpg" alt="How to Write a Book" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://img.youtube.com/vi/avMqpd921rg/0.jpg" alt="How to Write a Book"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>How to Write a Book</h3>
                     <p>20-step proven method.</p>
-                    <a href="https://www.youtube.com/watch?v=avMqpd921rg" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://www.youtube.com/watch?v=avMqpd921rg" class="card-link" target="_blank"
+                        rel="noopener noreferrer">Start Learning →</a>
                 </div>
                 <div class="bonus-card course-card">
                     <div class="card-glow"></div>
-                    <img src="https://img.youtube.com/vi/El_bbS31msw/0.jpg" alt="Trading for Beginners" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                    <img src="https://img.youtube.com/vi/El_bbS31msw/0.jpg" alt="Trading for Beginners"
+                        style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
                     <span class="card-tag course-tag">Course</span>
                     <h3>Trading for Beginners</h3>
                     <p>Full trading course for beginners.</p>
-                    <a href="https://www.youtube.com/watch?v=El_bbS31msw" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                    <a href="https://www.youtube.com/watch?v=El_bbS31msw" class="card-link" target="_blank"
+                        rel="noopener noreferrer">Start Learning →</a>
                 </div>
             </div>
         </section>
@@ -397,13 +473,14 @@
             <div class="referral-locked-overlay" id="referral-locked">
                 <div class="locked-card">
                     <div class="locked-icon-wrap">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="url(#lock-grad)" stroke-width="1.5">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="url(#lock-grad)"
+                            stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0110 0v4" />
                             <defs>
                                 <linearGradient id="lock-grad" x1="3" y1="7" x2="21" y2="22">
-                                    <stop offset="0%" stop-color="#fbbf24"/>
-                                    <stop offset="100%" stop-color="#f59e0b"/>
+                                    <stop offset="0%" stop-color="#fbbf24" />
+                                    <stop offset="100%" stop-color="#f59e0b" />
                                 </linearGradient>
                             </defs>
                         </svg>
@@ -422,22 +499,31 @@
                         <span class="chest-icon">🏆</span>
                     </div>
                     <h3 class="treasure-title">Your Referral Treasure</h3>
-                    <p class="treasure-desc">Share your unique referral link and unlock exclusive rewards for every friend who joins!</p>
+                    <p class="treasure-desc">Share your unique referral link and unlock exclusive rewards for every
+                        friend who joins!</p>
                 </div>
 
                 <!-- Referral Progress Tracker -->
-                <div class="referral-tracker" style="margin: 30px 0; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="margin-bottom: 20px; font-size: 1.4rem; color: #fbbf24; text-align: center;">🚀 Your Referral Goal Progress</h3>
-                    
+                <div class="referral-tracker"
+                    style="margin: 30px 0; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="margin-bottom: 20px; font-size: 1.4rem; color: #fbbf24; text-align: center;">🚀 Your
+                        Referral Goal Progress</h3>
+
                     <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                        <input type="text" id="sim-ref-name" placeholder="Enter friend's name to invite..." style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff;">
-                        <button id="sim-ref-btn" style="padding: 12px 24px; border-radius: 8px; border: none; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #000; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">Add Referral (Simulate)</button>
+                        <input type="text" id="sim-ref-name" placeholder="Enter friend's name to invite..."
+                            style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff;">
+                        <button id="sim-ref-btn"
+                            style="padding: 12px 24px; border-radius: 8px; border: none; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #000; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">Add
+                            Referral (Simulate)</button>
                     </div>
 
-                    <div class="progress-bar-container" style="height: 20px; width: 100%; background: rgba(0,0,0,0.6); border-radius: 10px; overflow: hidden; margin-bottom: 12px; position: relative;">
-                        <div id="ref-progress-bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #ec4899, #fbbf24); transition: width 0.5s ease; box-shadow: 0 0 10px rgba(251,191,36,0.5);"></div>
+                    <div class="progress-bar-container"
+                        style="height: 20px; width: 100%; background: rgba(0,0,0,0.6); border-radius: 10px; overflow: hidden; margin-bottom: 12px; position: relative;">
+                        <div id="ref-progress-bar"
+                            style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #ec4899, #fbbf24); transition: width 0.5s ease; box-shadow: 0 0 10px rgba(251,191,36,0.5);">
+                        </div>
                     </div>
-                    
+
                     <div style="display: flex; justify-content: space-between; font-size: 1rem; color: #ccc;">
                         <span id="ref-progress-text"><strong>0</strong> Referrals</span>
                         <span>Goal: 20 (Diamond Tier)</span>
@@ -454,7 +540,10 @@
                             <p>1-9 Referrals</p>
                             <ul>
                                 <li>Earn Affiliate Money</li>
-                                <li><strong>Bonus Course:</strong> <a href="https://youtube.com/playlist?list=PLh6cbcF0B-nlY2fiKL7HNboJ712gYsZ8z&si=AA3qRmW9jh3Fa996" target="_blank" style="color: #fbbf24; text-decoration: underline;">Advanced Personality Development</a> By Pushkar Raj Thakur</li>
+                                <li><strong>Bonus Course:</strong> <a
+                                        href="https://youtube.com/playlist?list=PLh6cbcF0B-nlY2fiKL7HNboJ712gYsZ8z&si=AA3qRmW9jh3Fa996"
+                                        target="_blank" style="color: #fbbf24; text-decoration: underline;">Advanced
+                                        Personality Development</a> By Pushkar Raj Thakur</li>
                             </ul>
                         </div>
                         <div class="tier-card silver">
@@ -466,7 +555,8 @@
                                 <li>Increased Earnings</li>
                             </ul>
                         </div>
-                        <div class="tier-card diamond" style="border: 1px solid rgba(236, 72, 153, 0.4); box-shadow: 0 0 20px rgba(236, 72, 153, 0.1);">
+                        <div class="tier-card diamond"
+                            style="border: 1px solid rgba(236, 72, 153, 0.4); box-shadow: 0 0 20px rgba(236, 72, 153, 0.1);">
                             <div class="tier-medal">💎</div>
                             <h4>Diamond</h4>
                             <p>20+ Referrals</p>
@@ -486,23 +576,23 @@
                         const input = document.getElementById('sim-ref-name');
                         const bar = document.getElementById('ref-progress-bar');
                         const text = document.getElementById('ref-progress-text');
-                        
-                        if(btn && input && bar && text) {
+
+                        if (btn && input && bar && text) {
                             btn.addEventListener('click', () => {
-                                if(input.value.trim() === '') {
+                                if (input.value.trim() === '') {
                                     alert('Please enter a name to simulate a referral.');
                                     return;
                                 }
-                                if(refCount < maxRefs) {
+                                if (refCount < maxRefs) {
                                     refCount++;
                                     const percentage = (refCount / maxRefs) * 100;
                                     bar.style.width = percentage + '%';
                                     text.innerHTML = `<strong>${refCount}</strong> Referrals`;
                                     input.value = '';
-                                    
-                                    if(refCount === 1) alert("🎉 Bronze Tier Unlocked! You've started earning money AND unlocked the Advanced Personality Development Course!");
-                                    if(refCount === 10) alert("🥈 Silver Tier Unlocked! You've obtained the Start a Business Package with more earnings!");
-                                    if(refCount === 20) alert("💎 DIAMOND TIER UNLOCKED! You got the Hugging Face AI tool worth ₹20,000 for FREE and max earnings!");
+
+                                    if (refCount === 1) alert("🎉 Bronze Tier Unlocked! You've started earning money AND unlocked the Advanced Personality Development Course!");
+                                    if (refCount === 10) alert("🥈 Silver Tier Unlocked! You've obtained the Start a Business Package with more earnings!");
+                                    if (refCount === 20) alert("💎 DIAMOND TIER UNLOCKED! You got the Hugging Face AI tool worth ₹20,000 for FREE and max earnings!");
                                 } else {
                                     alert('You have reached the maximum Diamond tier! Amazing job!');
                                     input.value = '';
@@ -518,7 +608,11 @@
                     <div class="referral-link-box">
                         <input type="text" id="referral-link" readonly value="Loading your referral link...">
                         <button class="copy-btn" id="copy-link-btn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" />
+                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                            </svg>
                             <span>Copy</span>
                         </button>
                     </div>
@@ -532,204 +626,265 @@
                         <!-- Tools -->
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=useanything.com&sz=128" alt="AnythingLLM" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>AnythingLLM</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=useanything.com&sz=128"
+                                alt="AnythingLLM"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>AnythingLLM</h3>
                             <p>All-in-one desktop AI assistant.</p>
-                            <a href="https://useanything.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://useanything.com/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=zilliz.com&sz=128" alt="PrivateGPT" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>PrivateGPT</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=zilliz.com&sz=128" alt="PrivateGPT"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>PrivateGPT</h3>
                             <p>Interact with docs privately.</p>
-                            <a href="https://github.com/imartinez/privateGPT" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://github.com/imartinez/privateGPT" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=gpt4all.io&sz=128" alt="GPT4All" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>GPT4All</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=gpt4all.io&sz=128" alt="GPT4All"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>GPT4All</h3>
                             <p>Run LLMs anywhere.</p>
-                            <a href="https://gpt4all.io/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://gpt4all.io/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card" style="border: 1px solid rgba(236, 72, 153, 0.4);">
-                            <div class="card-glow" style="background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.2), transparent 70%);"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=huggingface.co&sz=128" alt="Hugging Face" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">💎 20+ Referrals</span>
-                    <h3>Hugging Face</h3>
-                            <p>The "GitHub of AI", providing access to thousands of open-source models, datasets, and demo spaces.</p>
-                            <a href="https://huggingface.co/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <div class="card-glow"
+                                style="background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.2), transparent 70%);">
+                            </div>
+                            <img src="https://www.google.com/s2/favicons?domain=huggingface.co&sz=128"
+                                alt="Hugging Face"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag"
+                                style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">💎
+                                20+ Referrals</span>
+                            <h3>Hugging Face</h3>
+                            <p>The "GitHub of AI", providing access to thousands of open-source models, datasets, and
+                                demo spaces.</p>
+                            <a href="https://huggingface.co/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=openwebui.com&sz=128" alt="OpenWebUI" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>OpenWebUI</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=openwebui.com&sz=128" alt="OpenWebUI"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>OpenWebUI</h3>
                             <p>User-friendly WebUI for LLMs.</p>
-                            <a href="https://openwebui.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://openwebui.com/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=dify.ai&sz=128" alt="Dify" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>Dify</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=dify.ai&sz=128" alt="Dify"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>Dify</h3>
                             <p>LLM app development platform.</p>
-                            <a href="https://dify.ai/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://dify.ai/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=appflowy.io&sz=128" alt="AppFlowy" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>AppFlowy</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=appflowy.io&sz=128" alt="AppFlowy"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>AppFlowy</h3>
                             <p>Open-source Notion alternative.</p>
-                            <a href="https://www.appflowy.io/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://www.appflowy.io/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=affinity.co&sz=128" alt="Affinity" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>Affinity</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=affinity.co&sz=128" alt="Affinity"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>Affinity</h3>
                             <p>Relationship management.</p>
-                            <a href="https://github.com/affinity-project" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://github.com/affinity-project" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=supabase.com&sz=128" alt="Supabase" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>Supabase</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=supabase.com&sz=128" alt="Supabase"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>Supabase</h3>
                             <p>Open-source Firebase alternative.</p>
-                            <a href="https://supabase.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://supabase.com/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=appsmith.com&sz=128" alt="Appsmith" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>Appsmith</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=appsmith.com&sz=128" alt="Appsmith"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>Appsmith</h3>
                             <p>Build internal tools with AI.</p>
-                            <a href="https://www.appsmith.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://www.appsmith.com/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=budibase.com&sz=128" alt="Budibase" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>Budibase</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=budibase.com&sz=128" alt="Budibase"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>Budibase</h3>
                             <p>Low-code business app platform.</p>
-                            <a href="https://budibase.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://budibase.com/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=tooljet.com&sz=128" alt="ToolJet" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>ToolJet</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=tooljet.com&sz=128" alt="ToolJet"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>ToolJet</h3>
                             <p>Open-source low-code framework.</p>
-                            <a href="https://tooljet.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://tooljet.com/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=n8n.io&sz=128" alt="N8N" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>N8N</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=n8n.io&sz=128" alt="N8N"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>N8N</h3>
                             <p>Workflow automation with AI.</p>
-                            <a href="https://n8n.io/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://n8n.io/" class="card-link" target="_blank" rel="noopener noreferrer">Access
+                                Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=activepieces.com&sz=128" alt="ActivePieces" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>ActivePieces</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=activepieces.com&sz=128"
+                                alt="ActivePieces"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>ActivePieces</h3>
                             <p>Open-source automation.</p>
-                            <a href="https://www.activepieces.com/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://www.activepieces.com/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <div class="bonus-card tool-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=typebot.io&sz=128" alt="Typebot" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
-                    <span class="card-tag">Tool</span>
-                    <h3>Typebot</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=typebot.io&sz=128" alt="Typebot"
+                                style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: white; padding: 4px; margin-bottom: 16px;">
+                            <span class="card-tag">Tool</span>
+                            <h3>Typebot</h3>
                             <p>Open-source chatbot builder.</p>
-                            <a href="https://typebot.io/" class="card-link" target="_blank" rel="noopener noreferrer">Access Now →</a>
+                            <a href="https://typebot.io/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Access Now →</a>
                         </div>
                         <!-- Courses -->
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://yt3.googleusercontent.com/ytc/AIdro_kXfED3cTbI65w1bZ2r2E8P_YkXN9b_y1G8AIfg7a2rMw=s176-c-k-c0x00ffffff-no-rj" alt="Sales Success Playlist" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>Sales Success Playlist</h3>
+                            <img src="https://yt3.googleusercontent.com/ytc/AIdro_kXfED3cTbI65w1bZ2r2E8P_YkXN9b_y1G8AIfg7a2rMw=s176-c-k-c0x00ffffff-no-rj"
+                                alt="Sales Success Playlist"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>Sales Success Playlist</h3>
                             <p>Increase sales and income.</p>
-                            <a href="https://www.youtube.com/playlist?list=PL117ADA8336D83E5F" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.youtube.com/playlist?list=PL117ADA8336D83E5F" class="card-link"
+                                target="_blank" rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://img.youtube.com/vi/pUowBZKDOhs/0.jpg" alt="Professional Speaker" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>Professional Speaker</h3>
+                            <img src="https://img.youtube.com/vi/pUowBZKDOhs/0.jpg" alt="Professional Speaker"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>Professional Speaker</h3>
                             <p>Art of public speaking.</p>
-                            <a href="https://www.youtube.com/watch?v=pUowBZKDOhs" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.youtube.com/watch?v=pUowBZKDOhs" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://img.youtube.com/vi/5PMNesJuFVE/0.jpg" alt="Network Marketing" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>Network Marketing</h3>
+                            <img src="https://img.youtube.com/vi/5PMNesJuFVE/0.jpg" alt="Network Marketing"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>Network Marketing</h3>
                             <p>Rock your business.</p>
-                            <a href="https://www.youtube.com/watch?v=5PMNesJuFVE" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.youtube.com/watch?v=5PMNesJuFVE" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://img.youtube.com/vi/HCERJW0Hh7M/0.jpg" alt="Options Trading" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>Options Trading</h3>
+                            <img src="https://img.youtube.com/vi/HCERJW0Hh7M/0.jpg" alt="Options Trading"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>Options Trading</h3>
                             <p>6-hour in-depth guide.</p>
-                            <a href="https://www.youtube.com/watch?v=HCERJW0Hh7M" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.youtube.com/watch?v=HCERJW0Hh7M" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://img.youtube.com/vi/9A28tTKjBuA/0.jpg" alt="Day Trading Intro" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>Day Trading Intro</h3>
+                            <img src="https://img.youtube.com/vi/9A28tTKjBuA/0.jpg" alt="Day Trading Intro"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>Day Trading Intro</h3>
                             <p>Free intro to day trading.</p>
-                            <a href="https://www.youtube.com/watch?v=9A28tTKjBuA" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.youtube.com/watch?v=9A28tTKjBuA" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=ig.com&sz=128" alt="IG Academy Trading" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>IG Academy Trading</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=ig.com&sz=128" alt="IG Academy Trading"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>IG Academy Trading</h3>
                             <p>Interactive trading lessons.</p>
-                            <a href="https://www.ig.com/en/learn-to-trade/ig-academy/courses" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.ig.com/en/learn-to-trade/ig-academy/courses" class="card-link"
+                                target="_blank" rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=scu.edu&sz=128" alt="MOBI Starting a Biz" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>MOBI Starting a Biz</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=scu.edu&sz=128"
+                                alt="MOBI Starting a Biz"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>MOBI Starting a Biz</h3>
                             <p>Free business course.</p>
-                            <a href="https://www.scu.edu/mobi/" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.scu.edu/mobi/" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://www.google.com/s2/favicons?domain=garyvaynerchuk.com&sz=128" alt="47 Pages Playbook" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>47 Pages Playbook</h3>
+                            <img src="https://www.google.com/s2/favicons?domain=garyvaynerchuk.com&sz=128"
+                                alt="47 Pages Playbook"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>47 Pages Playbook</h3>
                             <p>Marketing strategy framework.</p>
-                            <a href="https://garyvaynerchuk.com/47-pages-that-will-change-your-entire-marketing-organization-approach/" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://garyvaynerchuk.com/47-pages-that-will-change-your-entire-marketing-organization-approach/"
+                                class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://img.youtube.com/vi/8hUTeZpVdGw/0.jpg" alt="Life-Changing Advice" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>Life-Changing Advice</h3>
+                            <img src="https://img.youtube.com/vi/8hUTeZpVdGw/0.jpg" alt="Life-Changing Advice"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>Life-Changing Advice</h3>
                             <p>Strategy and encouragement.</p>
-                            <a href="https://www.youtube.com/watch?v=8hUTeZpVdGw" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.youtube.com/watch?v=8hUTeZpVdGw" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Start Learning →</a>
                         </div>
                         <div class="bonus-card course-card">
                             <div class="card-glow"></div>
-                            <img src="https://img.youtube.com/vi/grSnCHhKhLE/0.jpg" alt="Powerful Sales" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
-                    <span class="card-tag course-tag">Course</span>
-                    <h3>Powerful Sales</h3>
+                            <img src="https://img.youtube.com/vi/grSnCHhKhLE/0.jpg" alt="Powerful Sales"
+                                style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 16px;">
+                            <span class="card-tag course-tag">Course</span>
+                            <h3>Powerful Sales</h3>
                             <p>Video guide on sales personality.</p>
-                            <a href="https://www.youtube.com/watch?v=grSnCHhKhLE" class="card-link" target="_blank" rel="noopener noreferrer">Start Learning →</a>
+                            <a href="https://www.youtube.com/watch?v=grSnCHhKhLE" class="card-link" target="_blank"
+                                rel="noopener noreferrer">Start Learning →</a>
                         </div>
                     </div>
                 </div>
@@ -757,7 +912,11 @@
                             <div class="input-line"></div>
                         </div>
                         <button type="submit" class="referral-submit-btn" id="send-referral-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
                             <span>Send Invite</span>
                         </button>
                     </form>
@@ -784,4 +943,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
