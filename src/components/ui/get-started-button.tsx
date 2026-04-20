@@ -1,20 +1,16 @@
-import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Gift } from "lucide-react";
 
 export function OpenTheAccessButton({ onClick }: { onClick?: () => void }) {
   return (
-    <Button 
-      className="group relative overflow-hidden text-2xl font-semibold px-12 py-8 h-auto rounded-xl" 
-      size="lg" 
+    <button
       onClick={onClick}
+      className="group relative inline-flex items-center justify-center px-12 py-6 font-bold text-white transition-all duration-300 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-indigo-600 rounded-full hover:scale-105 hover:shadow-[0_0_40px_rgba(167,139,250,0.7)] shadow-[0_0_20px_rgba(167,139,250,0.4)]"
     >
-      <span className="mr-12 transition-opacity duration-500 group-hover:opacity-0">
-        Access your gift
-      </span>
-      <i className="absolute right-2 top-2 bottom-2 rounded-lg z-10 grid w-[4rem] place-items-center transition-all duration-500 bg-primary-foreground/15 group-hover:w-[calc(100%-1rem)] group-active:scale-95 text-white">
-        <ChevronRight size={32} strokeWidth={2.5} aria-hidden="true" />
-      </i>
-    </Button>
+      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-600 to-indigo-600 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 -z-10" />
+      <Gift className="mr-3 h-6 w-6 text-white/90 group-hover:animate-pulse" />
+      <span className="text-2xl tracking-wide">Access Your Gift</span>
+      <ChevronRight className="ml-3 h-6 w-6 text-white/70 group-hover:translate-x-1 transition-transform duration-300" />
+    </button>
   );
 }
 
