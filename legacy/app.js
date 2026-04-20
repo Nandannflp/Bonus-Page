@@ -1,3 +1,16 @@
+
+// Script robustly waits for React DOM to mount
+function bootstrapLegacyApp() {
+    const canvas = document.getElementById('particles-canvas');
+    if (!canvas) {
+        // Retry until React mounts the element
+        setTimeout(bootstrapLegacyApp, 100);
+        return;
+    }
+    // Prevent double init
+    if (window.legacyAppInitialized) return;
+    window.legacyAppInitialized = true;
+
 // --- Particle Background Animation ---
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
@@ -309,7 +322,8 @@ updateUIState();
 
 
 // === SCROLL SURPRISES & GAMIFIED SPOTLIGHT EFFECTS ===
-document.addEventListener('DOMContentLoaded', () => {
+// auto-run instead
+(() => {
     // 1. Setup Spotlight effect on cards
     const cards = document.querySelectorAll('.bonus-card, .tier-card');
     cards.forEach(card => {
@@ -351,3 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollObserver.observe(header);
     });
 });
+
+}
+// Start polling immediately when script loads
+bootstrapLegacyApp();
