@@ -1260,3 +1260,42 @@ ul {
     .tier-card.gold { transform: scale(1); }
     .auth-card { padding: 32px 24px; }
 }
+
+/* ===== SCROLL ANIMATIONS AND SURPRISES ===== */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.bonus-card {
+    position: relative;
+    overflow: hidden;
+    /* transition is already there */
+}
+
+/* Add a spotlight effect variable to bonus cards */
+.bonus-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 10;
+}
+.bonus-card:hover::after {
+    opacity: 1;
+}
+
+.bonus-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 20px rgba(167,139,250, 0.3);
+    border-color: rgba(167,139,250, 0.5);
+}
+
