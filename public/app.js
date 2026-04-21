@@ -163,13 +163,13 @@ function updateUIState() {
     const day1Status = document.getElementById('day1-status');
     
     if (day1Unlocked) {
-        day1Content.classList.remove('blurred');
-        day1Wrap.classList.add('hidden');
-        day1Status.innerHTML = `<span class="status-dot unlocked"></span><span>Unlocked</span>`;
+        day1Content?.classList.remove('blurred');
+        day1Wrap?.classList.add('hidden');
+        if(day1Status) day1Status.innerHTML = `<span class="status-dot unlocked"></span><span>Unlocked</span>`;
     } else {
-        day1Content.classList.add('blurred');
-        day1Wrap.classList.remove('hidden');
-        day1Status.innerHTML = `<span class="status-dot locked"></span><span>Locked — Enter secret code to unlock</span>`;
+        day1Content?.classList.add('blurred');
+        day1Wrap?.classList.remove('hidden');
+        if(day1Status) day1Status.innerHTML = `<span class="status-dot locked"></span><span>Locked — Enter secret code to unlock</span>`;
     }
     
     // Day 2
@@ -178,13 +178,13 @@ function updateUIState() {
     const day2Status = document.getElementById('day2-status');
     
     if (day2Unlocked) {
-        day2Content.classList.remove('blurred');
-        day2Wrap.classList.add('hidden');
-        day2Status.innerHTML = `<span class="status-dot unlocked"></span><span>Unlocked</span>`;
+        day2Content?.classList.remove('blurred');
+        day2Wrap?.classList.add('hidden');
+        if(day2Status) day2Status.innerHTML = `<span class="status-dot unlocked"></span><span>Unlocked</span>`;
     } else {
-        day2Content.classList.add('blurred');
-        day2Wrap.classList.remove('hidden');
-        day2Status.innerHTML = `<span class="status-dot locked"></span><span>Locked — Enter secret code to unlock</span>`;
+        day2Content?.classList.add('blurred');
+        day2Wrap?.classList.remove('hidden');
+        if(day2Status) day2Status.innerHTML = `<span class="status-dot locked"></span><span>Locked — Enter secret code to unlock</span>`;
     }
     
     // Referral (Unlocked if Day 1 AND Day 2 are unlocked)
@@ -194,14 +194,14 @@ function updateUIState() {
     const refLinkInput = document.getElementById('referral-link');
     
     if (day1Unlocked && day2Unlocked) {
-        refContent.classList.remove('blurred');
-        refLocked.classList.add('hidden');
-        refStatus.innerHTML = `<span class="status-dot unlocked"></span><span>Vault Unlocked</span>`;
-        refLinkInput.value = `https://bonuses.example.com/ref/${currentUser?.name || 'user'}123`;
+        refContent?.classList.remove('blurred');
+        refLocked?.classList.add('hidden');
+        if(refStatus) refStatus.innerHTML = `<span class="status-dot unlocked"></span><span>Vault Unlocked</span>`;
+        if(refLinkInput) refLinkInput.value = `https://bonuses.example.com/ref/${currentUser?.name || 'user'}123`;
     } else {
-        refContent.classList.add('blurred');
-        refLocked.classList.remove('hidden');
-        refStatus.innerHTML = `<span class="status-dot locked"></span><span>Locked — Unlock Day 1 & Day 2 first</span>`;
+        refContent?.classList.add('blurred');
+        refLocked?.classList.remove('hidden');
+        if(refStatus) refStatus.innerHTML = `<span class="status-dot locked"></span><span>Locked — Unlock Day 1 & Day 2 first</span>`;
     }
 }
 
