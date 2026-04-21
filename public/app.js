@@ -153,8 +153,8 @@ function showToast(message, type = 'success') {
 const SECRET_CODE_DAY1_B64 = "Sk9JTjAxMQ=="; // JOIN011
 const SECRET_CODE_DAY2_B64 = "Qk9PTTAxMQ=="; // BOOM011
 
-let day1Unlocked = false;
-let day2Unlocked = false;
+let day1Unlocked = true;
+let day2Unlocked = true;
 
 function updateUIState() {
     // Day 1
